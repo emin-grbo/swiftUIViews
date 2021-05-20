@@ -16,7 +16,8 @@
 		D726D4E425EC399F0044840D /* NeumorphButtonPURPLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */; };
 		D726D4E525EC399F0044840D /* NeumorphButtonPURPLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */; };
 		D7630716264BB38700696726 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7630715264BB38700696726 /* RoundedButton.swift */; };
-		D7EBE2E3264D22430009C7FE /* NeumorphButtonLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E2264D22430009C7FE /* NeumorphButtonLight.swift */; };
+		D7A7C7312654EBED00A77196 /* IconRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7C7302654EBED00A77196 /* IconRoundedButton.swift */; };
+		D7EBE2E3264D22430009C7FE /* NeumorphButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E2264D22430009C7FE /* NeumorphButton.swift */; };
 		D7EBE2E5264D3A9F0009C7FE /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E4264D3A9F0009C7FE /* LineGraph.swift */; };
 		D7EBE2E7264D663C0009C7FE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E6264D663C0009C7FE /* Colors.swift */; };
 		D7F6D888263323200033A10C /* CircleGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6D887263323200033A10C /* CircleGraph.swift */; };
@@ -33,8 +34,9 @@
 		D726D4CF25EC39060044840D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphButtonPURPLE.swift; sourceTree = "<group>"; };
 		D7630715264BB38700696726 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D7A7C7302654EBED00A77196 /* IconRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRoundedButton.swift; sourceTree = "<group>"; };
 		D7B4C530262F5EA6005DAE03 /* swiftUIViews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftUIViews.entitlements; sourceTree = "<group>"; };
-		D7EBE2E2264D22430009C7FE /* NeumorphButtonLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphButtonLight.swift; sourceTree = "<group>"; };
+		D7EBE2E2264D22430009C7FE /* NeumorphButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphButton.swift; sourceTree = "<group>"; };
 		D7EBE2E4264D3A9F0009C7FE /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 		D7EBE2E6264D663C0009C7FE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D7F6D887263323200033A10C /* CircleGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGraph.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				D7B4C530262F5EA6005DAE03 /* swiftUIViews.entitlements */,
 				D726D4BC25EC39050044840D /* Shared */,
+				D75EA4B826562FD7002E4630 /* OLD */,
 				D726D4C625EC39060044840D /* iOS */,
 				D726D4CD25EC39060044840D /* macOS */,
 				D726D4C525EC39060044840D /* Products */,
@@ -109,14 +112,22 @@
 		D726D4E825EC39A60044840D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */,
-				D7EBE2E2264D22430009C7FE /* NeumorphButtonLight.swift */,
+				D7EBE2E2264D22430009C7FE /* NeumorphButton.swift */,
 				D7630715264BB38700696726 /* RoundedButton.swift */,
+				D7A7C7302654EBED00A77196 /* IconRoundedButton.swift */,
 				D7F6D887263323200033A10C /* CircleGraph.swift */,
 				D7EBE2E4264D3A9F0009C7FE /* LineGraph.swift */,
 				D7EBE2E6264D663C0009C7FE /* Colors.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D75EA4B826562FD7002E4630 /* OLD */ = {
+			isa = PBXGroup;
+			children = (
+				D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */,
+			);
+			path = OLD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7EBE2E3264D22430009C7FE /* NeumorphButtonLight.swift in Sources */,
+				D7EBE2E3264D22430009C7FE /* NeumorphButton.swift in Sources */,
+				D7A7C7312654EBED00A77196 /* IconRoundedButton.swift in Sources */,
 				D7EBE2E7264D663C0009C7FE /* Colors.swift in Sources */,
 				D7F6D888263323200033A10C /* CircleGraph.swift in Sources */,
 				D7EBE2E5264D3A9F0009C7FE /* LineGraph.swift in Sources */,

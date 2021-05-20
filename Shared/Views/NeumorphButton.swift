@@ -8,9 +8,9 @@ import SwiftUI
 fileprivate let cornerRadius:                   CGFloat = 24
 fileprivate let fontSize:                       CGFloat = 20
 fileprivate let fontHorizontalPadding:          CGFloat = 16
-fileprivate let radiusTapped:                   CGFloat = 3
+fileprivate let radiusTapped:                   CGFloat = 4
+fileprivate let offsetTapped:                   CGFloat = 4
 fileprivate let radiusUntapped:                 CGFloat = 8
-fileprivate let offsetTapped:                   CGFloat = 3
 fileprivate let offsetUntapped:                 CGFloat = 10
 
 // light mode shadows
@@ -79,8 +79,8 @@ struct NeuMorphButton<S: Shape>: View {
                     .foregroundColor(bgColor)
                     .overlay(
                         shape
-                            .stroke(bgColor, lineWidth: 4)
-                            .shadow(radius: 5, x: 4, y: 4))
+                            .stroke(bgColor, lineWidth: radiusTapped)
+                            .shadow(radius: radiusTapped, x: offsetTapped, y: offsetTapped))
                     .overlay(
                         shape
                             .stroke(bgColor, lineWidth: 4)
