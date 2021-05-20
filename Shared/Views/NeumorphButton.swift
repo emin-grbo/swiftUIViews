@@ -25,6 +25,10 @@ fileprivate let darkBgColor             = Color(.displayP3, red: 0.1176, green: 
 fileprivate let textAccentColor         = Color(.displayP3, red: 0.8, green: 0.8274, blue: 0.8784, opacity: 1.0)
 fileprivate let baseAccentColor         = Color(.displayP3, red: 0.9764, green: 0.9803, blue: 0.9882, opacity: 1.0)
 
+// MARK: IMPORTANT🚨
+/* Idealy, you would not be using this view at all, only the code below the refactor line.
+But i left it here for demonstration purposes */
+
 /* This is a just a holder view for the button, as this is button style.
  You would need to adapt this to your app in a similar fashion as in this example. 👇*/
 struct NeumorphButtonView: View {

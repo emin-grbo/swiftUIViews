@@ -5,11 +5,8 @@ import SwiftUI
 
 /* Defining all constants used in the view.
  Idealy, you would calculate these based on your view size or layout, or prefference. 👌*/
-fileprivate let cornerRadius:                   CGFloat = 24
 fileprivate let fontSize:                       CGFloat = 20
 fileprivate let fontHorizontalPadding:          CGFloat = 16
-fileprivate let radiusTapped:                   CGFloat = 10
-fileprivate let offsetUntapped:                 CGFloat = 10
 fileprivate var defaultRadius:                  CGFloat = 24
 
 fileprivate let lightShadowColor        = Color(.displayP3, red: 0.80, green: 0.80, blue: 1, opacity: 1.0)
@@ -17,6 +14,10 @@ fileprivate let darkShadowColor         = Color(.displayP3, red: 0.1803, green: 
 
 fileprivate let baseAccentColor         = Color(.displayP3, red: 1, green: 0.04, blue: 0.56, opacity: 1.0)
 fileprivate let baseDarkColor           = Color(.displayP3, red: 0.78, green: 0, blue: 0.45, opacity: 1.0)
+
+// MARK: IMPORTANT🚨
+/* Idealy, you would not be using this view at all, only the code below the refactor line.
+But i left it here for demonstration purposes */
 
 /* This is a just a holder view for the button, as this is button style.
  You would need to adapt this to your app in a similar fashion as in this example. 👇*/
@@ -44,40 +45,16 @@ struct RoundedButtonView: View {
 }
 //------------------- REFACTOR ABOVE THIS LINE ---------------------------------------
 
-struct RoundedButtonStyle: ButtonStyle {
-    var shape = RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-    
+struct RoundedButtonStyle: ButtonStyle {    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .font(Font.system(size: fontSize, weight: .bold, design: .default))
             .frame(maxWidth: .infinity)
             .padding(.horizontal, fontHorizontalPadding)
             .padding()
-            .background(
-                RoundedButton(isHighlighted: configuration.isPressed, shape: shape))
+            .background(configuration.isPressed ? baseDarkColor : baseAccentColor)
+            .cornerRadius(defaultRadius)
             .foregroundColor(.white)
-    }
-}
-
-struct RoundedButton<S: Shape>: View {
-    var isHighlighted: Bool
-    var shape: S
-    
-    var body: some View {
-        ZStack {
-            if isHighlighted {
-                shape
-                    .foregroundColor(baseDarkColor)
-                    .overlay(
-                        shape
-                            .stroke(baseAccentColor, lineWidth: 4)
-                            .shadow(color: baseDarkColor, radius: radiusTapped, x: 0, y: 0))
-                    .clipShape(shape)
-            } else {
-                shape
-                    .foregroundColor(baseAccentColor)
-            }
-        }
     }
 }
 

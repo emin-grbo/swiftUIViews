@@ -21,7 +21,7 @@ struct ContentView: View {
         
         ZStack {
             baseBGColor
-            NeumorphButtonView()
+            RoundedButtonView()
         }
         .edgesIgnoringSafeArea(.all)
     }
