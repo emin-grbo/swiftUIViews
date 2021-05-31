@@ -10,10 +10,12 @@
 swiftUIviews is an online collection of beautifly designed swiftUIViews by the swift community. Feelin like contributing? Follow the instructions below! 
 
 
-### Contributing 
-First of all, THANK YOU! Any type of contributions are more than welcome, no matter the skill level.
+## Contributing 
 
-I am working on a detailed WIKI for contribution instructions, but for now
+First of all, THANK YOU!
+Any type of contributions are more than welcome, no matter the skill level.
+
+I am working on a detailed WIKI for contribution instructions, but for now:
 - fork the repo and post the PR
 - try to keep the same style as for other views
 - edit YOURVUEW.swift file with...you guessed it, your view! (rename it of course)
