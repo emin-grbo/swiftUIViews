@@ -1,16 +1,10 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//  Created by Emin Grbo on 28/02/2021.
-//
+/* Use this view only for preview. All view data must be contained within one .swift file,
+ but here you can place it for preview and its quite ok to leave it there. */
 
 import SwiftUI
 
 fileprivate let lightBgColor = Color(.displayP3, red: 0.9764, green: 0.9803, blue: 0.9882, opacity: 1.0)
 fileprivate let darkBgColor = Color(.displayP3, red: 0.1176, green: 0.0784, blue: 0.1725, opacity: 1.0)
-//fileprivate let baseAccentColor     = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
-//fileprivate let backgroundColor     = Color(.displayP3, red: 0.9725, green: 0.9607, blue: 0.9882, opacity: 1.0)
 
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -21,7 +15,7 @@ struct ContentView: View {
         
         ZStack {
             baseBGColor
-            RoundedButtonView()
+            LoaderView() // idealy you would only change this line.
         }
         .edgesIgnoringSafeArea(.all)
     }

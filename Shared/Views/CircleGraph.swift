@@ -13,10 +13,10 @@ fileprivate let textFontSize:    CGFloat = 80
 fileprivate let completionStart: CGFloat = 0
 fileprivate let completionEnd:   CGFloat = 0.7
 
-fileprivate let lightShadowColor        = Color(.displayP3, red: 0.70, green: 0.70, blue: 1, opacity: 1.0)
-fileprivate let darkShadowColor         = Color(.displayP3, red: 0.3137, green: 0.1294, blue: 0.6980, opacity: 1.0)
-fileprivate let baseAccentColor     = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
-fileprivate let shadowColor         = Color(.displayP3, red: 0.9, green: 0.9, blue: 1, opacity: 1.0)
+fileprivate let lightShadowColor         = Color(.displayP3, red: 0.70, green: 0.70, blue: 1, opacity: 1.0)
+fileprivate let darkShadowColor          = Color(.displayP3, red: 0.3137, green: 0.1294, blue: 0.6980, opacity: 1.0)
+fileprivate let baseAccentColor          = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
+fileprivate let shadowColor              = Color(.displayP3, red: 0.9, green: 0.9, blue: 1, opacity: 1.0)
 //------------------- REFACTOR ABOVE THIS LINE ---------------------------------------
 
 struct CircleGraph: View {

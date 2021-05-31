@@ -13,8 +13,10 @@
 		D726D4D325EC39060044840D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726D4BE25EC39050044840D /* ContentView.swift */; };
 		D726D4D425EC39060044840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D726D4BF25EC39060044840D /* Assets.xcassets */; };
 		D726D4D525EC39060044840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D726D4BF25EC39060044840D /* Assets.xcassets */; };
-		D726D4E425EC399F0044840D /* NeumorphButtonPURPLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */; };
-		D726D4E525EC399F0044840D /* NeumorphButtonPURPLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */; };
+		D72B04612665618E0073CD37 /* YOUR-VIEW.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72B04602665618E0073CD37 /* YOUR-VIEW.swift */; };
+		D759F5CC265BB3D100A4FB31 /* SquircleGraphIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759F5CB265BB3D100A4FB31 /* SquircleGraphIcon.swift */; };
+		D759F5CE265BF76000A4FB31 /* TableCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759F5CD265BF76000A4FB31 /* TableCellImage.swift */; };
+		D759F5D0265C433E00A4FB31 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759F5CF265C433E00A4FB31 /* LoadingView.swift */; };
 		D7630716264BB38700696726 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7630715264BB38700696726 /* RoundedButton.swift */; };
 		D7A7C7312654EBED00A77196 /* SFSymbolRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7C7302654EBED00A77196 /* SFSymbolRoundedButton.swift */; };
 		D7EBE2E3264D22430009C7FE /* NeumorphButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E2264D22430009C7FE /* NeumorphButton.swift */; };
@@ -32,7 +34,10 @@
 		D726D4CC25EC39060044840D /* swiftUIViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftUIViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D726D4CE25EC39060044840D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D726D4CF25EC39060044840D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphButtonPURPLE.swift; sourceTree = "<group>"; };
+		D72B04602665618E0073CD37 /* YOUR-VIEW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YOUR-VIEW.swift"; sourceTree = "<group>"; };
+		D759F5CB265BB3D100A4FB31 /* SquircleGraphIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquircleGraphIcon.swift; sourceTree = "<group>"; };
+		D759F5CD265BF76000A4FB31 /* TableCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellImage.swift; sourceTree = "<group>"; };
+		D759F5CF265C433E00A4FB31 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D7630715264BB38700696726 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D7A7C7302654EBED00A77196 /* SFSymbolRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolRoundedButton.swift; sourceTree = "<group>"; };
 		D7B4C530262F5EA6005DAE03 /* swiftUIViews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftUIViews.entitlements; sourceTree = "<group>"; };
@@ -65,7 +70,6 @@
 			children = (
 				D7B4C530262F5EA6005DAE03 /* swiftUIViews.entitlements */,
 				D726D4BC25EC39050044840D /* Shared */,
-				D75EA4B826562FD7002E4630 /* OLD */,
 				D726D4C625EC39060044840D /* iOS */,
 				D726D4CD25EC39060044840D /* macOS */,
 				D726D4C525EC39060044840D /* Products */,
@@ -77,6 +81,7 @@
 			children = (
 				D726D4BD25EC39050044840D /* swiftUIViewsApp.swift */,
 				D726D4BE25EC39050044840D /* ContentView.swift */,
+				D72B04602665618E0073CD37 /* YOUR-VIEW.swift */,
 				D726D4E825EC39A60044840D /* Views */,
 				D726D4BF25EC39060044840D /* Assets.xcassets */,
 			);
@@ -112,6 +117,9 @@
 		D726D4E825EC39A60044840D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D759F5CF265C433E00A4FB31 /* LoadingView.swift */,
+				D759F5CD265BF76000A4FB31 /* TableCellImage.swift */,
+				D759F5CB265BB3D100A4FB31 /* SquircleGraphIcon.swift */,
 				D7A7C7302654EBED00A77196 /* SFSymbolRoundedButton.swift */,
 				D7EBE2E2264D22430009C7FE /* NeumorphButton.swift */,
 				D7EBE2E4264D3A9F0009C7FE /* LineGraph.swift */,
@@ -120,14 +128,6 @@
 				D7EBE2E6264D663C0009C7FE /* Colors.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		D75EA4B826562FD7002E4630 /* OLD */ = {
-			isa = PBXGroup;
-			children = (
-				D726D4E325EC399F0044840D /* NeumorphButtonPURPLE.swift */,
-			);
-			path = OLD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,12 +228,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7EBE2E3264D22430009C7FE /* NeumorphButton.swift in Sources */,
+				D759F5CC265BB3D100A4FB31 /* SquircleGraphIcon.swift in Sources */,
+				D759F5CE265BF76000A4FB31 /* TableCellImage.swift in Sources */,
 				D7A7C7312654EBED00A77196 /* SFSymbolRoundedButton.swift in Sources */,
 				D7EBE2E7264D663C0009C7FE /* Colors.swift in Sources */,
+				D759F5D0265C433E00A4FB31 /* LoadingView.swift in Sources */,
 				D7F6D888263323200033A10C /* CircleGraph.swift in Sources */,
 				D7EBE2E5264D3A9F0009C7FE /* LineGraph.swift in Sources */,
 				D7630716264BB38700696726 /* RoundedButton.swift in Sources */,
-				D726D4E425EC399F0044840D /* NeumorphButtonPURPLE.swift in Sources */,
+				D72B04612665618E0073CD37 /* YOUR-VIEW.swift in Sources */,
 				D726D4D225EC39060044840D /* ContentView.swift in Sources */,
 				D726D4D025EC39060044840D /* swiftUIViewsApp.swift in Sources */,
 			);
@@ -243,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D726D4E525EC399F0044840D /* NeumorphButtonPURPLE.swift in Sources */,
 				D726D4D325EC39060044840D /* ContentView.swift in Sources */,
 				D726D4D125EC39060044840D /* swiftUIViewsApp.swift in Sources */,
 			);
