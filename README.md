@@ -5,7 +5,7 @@
 
 ![Header](https://github.com/roblack/swiftUIViews/blob/main/imgs/GithubCover.jpg)
 
-# swiftUIViews - [🔗](swiftUIViews.dev)
+# swiftUIViews | [🔗](swiftUIViews.dev)
 
 swiftUIviews is an online collection of beautifly designed swiftUIViews by the swift community. Feelin like contributing? Follow the instructions below! 
 
