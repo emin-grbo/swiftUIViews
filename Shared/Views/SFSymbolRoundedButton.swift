@@ -55,7 +55,7 @@ struct SFSymbolButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         HStack {
-            Image(systemName: buttonIconString)
+            Image(systemName: sfIconString)
             configuration.label
                 .font(Font.system(size: fontSize, weight: .bold, design: .default))
         }
