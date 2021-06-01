@@ -1,3 +1,8 @@
+/*
+ This is just a "holder" of sorts for colors re-used throughout the project.
+ Like a stash? 😐
+ */
+
 import SwiftUI
 
 struct Colors {
