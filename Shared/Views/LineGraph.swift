@@ -1,10 +1,12 @@
+// MARK: IMPORTANT🚨
 /* For easy of copy/pastability, all code is in one bug chunk.
  Be a dear and refactor this out any way you see fit 🤘 */
 
+/* Idealy, you would NOT be using pre-defined constants in this way, so keep that in mind.*/
+
 import SwiftUI
 
-/* Defining all constants used in the view.
- Idealy, you would calculate these based on your view size or layout. 👌*/
+/* Defining all constants used in the view.*/
 fileprivate var defaultPadding:     CGFloat = 24
 fileprivate var fontSize:           CGFloat = 8
 fileprivate var lineWidth:          CGFloat = 24
@@ -24,13 +26,12 @@ fileprivate let firstAccentColor        = Color(.displayP3, red: 0.39, green: 0.
 fileprivate let secondAccentColor       = Color(.displayP3, red: 1, green: 0.04, blue: 0.56, opacity: 1.0)
 fileprivate let thirdAccentColor        = Color(.displayP3, red: 0.011, green: 0.631, blue: 0.984, opacity: 1.0)
 fileprivate let fadedBackgroundColor    = Color(.displayP3, red: 0.694, green: 0.737, blue: 0.815, opacity: 1.0)
-//------------------- REFACTOR ABOVE THIS LINE ---------------------------------------
 
 struct LineGraph: View {
     
     /*
-     Please please don't use the colors this way 😅 I am only adding it here so you can have a preview
-     for both light and dark views. You should create a new semantic color in the assets and use it that way 👌
+     Environtment is used just to make it easier to preview light and dark look in one view setup.
+     You should create a new semantic color in the assets and use it that way 👌
      */
     @Environment(\.colorScheme) var colorScheme
 

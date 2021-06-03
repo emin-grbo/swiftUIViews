@@ -1,10 +1,12 @@
+// MARK: IMPORTANT🚨
 /* For easy of copy/pastability, all code is in one bug chunk.
  Be a dear and refactor this out any way you see fit 🤘 */
 
+/* Idealy, you would NOT be using pre-defined constants in this way, so keep that in mind.*/
+
 import SwiftUI
 
-/* Defining all constants used in the view.
- Idealy, you would calculate these based on your view size or layout, or prefference. 👌*/
+/* Defining all constants used in the view.*/
 fileprivate let fontSize: CGFloat                   = 20
 fileprivate let fontHorizontalPadding: CGFloat      = 16
 fileprivate let shadowRadius: CGFloat               = 10
@@ -18,36 +20,6 @@ fileprivate let darkShadowColor                     = Color(.displayP3, red: 0.1
 
 fileprivate let purpleAccentColor                   = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
 fileprivate let purpleAccentColorDark               = Color(.displayP3, red: 0.37, green: 0.08, blue: 0.7, opacity: 1.0)
-
-// MARK: IMPORTANT🚨
-/* Idealy, you would not be using this view at all, only the code below the refactor line.
- But i left it here for demonstration purposes */
-
-/* This is a just a holder view for the button, as this is button style.
- You would need to adapt this to your app in a similar fashion as in this example. 👇*/
-struct SFSymbolButtonView: View {
-    
-    /*
-     Please please don't use the colors this way 😅 I am only adding it here so you can have a preview
-     for both light and dark views. You should create a new semantic color in the assets and use it that way 👌
-     */
-    @Environment(\.colorScheme) var colorScheme
-    
-    var body: some View {
-        
-        let shadowColor = colorScheme == .dark ? darkShadowColor : lightShadowColor
-        
-        ZStack {
-            Button("SFSymbol button") {
-                print("button tapped")
-            }
-            .buttonStyle(SFSymbolButtonStyle(sfIconString: buttonIconString))
-            .fixedSize()
-            .shadow(color: shadowColor, radius: defaultRadius)
-        }
-    }
-}
-//------------------- REFACTOR ABOVE THIS LINE ---------------------------------------
 
 struct SFSymbolButtonStyle: ButtonStyle {
     
@@ -71,11 +43,15 @@ struct SFSymbolButtonStyle: ButtonStyle {
 struct SFSymbolButtonView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SFSymbolButtonView()
+            Button("SFSymbol button") {}
+                .buttonStyle(SFSymbolButtonStyle(sfIconString: buttonIconString))
+                .fixedSize()
                 .padding(100)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.light)
-            SFSymbolButtonView()
+            Button("SFSymbol button") {}
+                .buttonStyle(SFSymbolButtonStyle(sfIconString: buttonIconString))
+                .fixedSize()
                 .padding(100)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.dark)

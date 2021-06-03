@@ -1,10 +1,12 @@
+// MARK: IMPORTANT🚨
 /* For easy of copy/pastability, all code is in one bug chunk.
-Be a dear and refactor this out any way you see fit 🤘 */
+ Be a dear and refactor this out any way you see fit 🤘 */
+
+/* Idealy, you would NOT be using pre-defined constants in this way, so keep that in mind.*/
 
 import SwiftUI
 
-/* Defining all constants used in the view.
- Idealy, you would calculate these based on your view size or layout, or prefference. 👌*/
+/* Defining all constants used in the view.*/
 fileprivate let cornerRadius:                   CGFloat = 24
 fileprivate let fontSize:                       CGFloat = 20
 fileprivate let fontHorizontalPadding:          CGFloat = 16
@@ -24,25 +26,6 @@ fileprivate let lightBgColor            = Color(.displayP3, red: 0.9764, green: 
 fileprivate let darkBgColor             = Color(.displayP3, red: 0.1176, green: 0.0784, blue: 0.1725, opacity: 1.0)
 fileprivate let textAccentColor         = Color(.displayP3, red: 0.8, green: 0.8274, blue: 0.8784, opacity: 1.0)
 fileprivate let baseAccentColor         = Color(.displayP3, red: 0.9764, green: 0.9803, blue: 0.9882, opacity: 1.0)
-
-// MARK: IMPORTANT🚨
-/* Idealy, you would not be using this view at all, only the code below the refactor line.
-But i left it here for demonstration purposes */
-
-/* This is a just a holder view for the button, as this is button style.
- You would need to adapt this to your app in a similar fashion as in this example. 👇*/
-struct NeumorphButtonView: View {
-    var body: some View {
-        ZStack {
-            Button("neumorph button 👌") {
-                print("button tapped")
-            }
-            .buttonStyle(NeumorphButtonStyle())
-            .fixedSize()
-        }
-    }
-}
-//------------------- REFACTOR ABOVE THIS LINE ---------------------------------------
 
 struct NeumorphButtonStyle: ButtonStyle {
     // Feel free to modify this shape to something else depending on how you are using it in the app.
@@ -65,8 +48,8 @@ struct NeuMorphButton<S: Shape>: View {
     var shape: S
     
     /*
-     Please please don't use the colors this way 😅 I am only adding it here so you can have a preview
-     for both light and dark views. You should create a new semantic color in the assets and use it that way 👌
+     Environtment is used just to make it easier to preview light and dark look in one view setup.
+     You should create a new semantic color in the assets and use it that way 👌
      */
     @Environment(\.colorScheme) var colorScheme
 

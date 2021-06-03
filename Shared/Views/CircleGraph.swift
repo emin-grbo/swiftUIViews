@@ -1,10 +1,12 @@
+// MARK: IMPORTANT🚨
 /* For easy of copy/pastability, all code is in one bug chunk.
  Be a dear and refactor this out any way you see fit 🤘 */
 
+/* Idealy, you would NOT be using pre-defined constants in this way, so keep that in mind.*/
+
 import SwiftUI
 
-/* Defining all constants used in the view.
- Idealy, you would calculate these based on your view size or layout. 👌*/
+/* Defining all constants used in the view.*/
 fileprivate let baseSize:        CGFloat = 300
 fileprivate let lineWidth:       CGFloat = 40
 fileprivate let shadowRadius:    CGFloat = 20
@@ -22,8 +24,8 @@ struct CircleGraph: View {
     
     let value: CGFloat
     /*
-     Please please don't use the colors this way 😅 I am only adding it here so you can have a preview
-     for both light and dark views. You should create a new semantic color in the assets and use it that way 👌
+     Environtment is used just to make it easier to preview light and dark look in one view setup.
+     You should create a new semantic color in the assets and use it that way 👌
      */
     @Environment(\.colorScheme) var colorScheme
     
@@ -53,7 +55,6 @@ struct CircleGraph: View {
                 .rotationEffect(.degrees(-90))
                 .shadow(color: shadowColor, radius: shadowRadius)
         }
-        
     }
 }
 
@@ -68,7 +69,6 @@ struct CircleGraph_Previews: PreviewProvider {
 
                 Slider(value: $value, in: 0...100, step: 1)
             }
-            
         }
     }
     

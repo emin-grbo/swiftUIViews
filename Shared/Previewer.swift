@@ -6,7 +6,7 @@ import SwiftUI
 fileprivate let lightBgColor = Color(.displayP3, red: 0.9764, green: 0.9803, blue: 0.9882, opacity: 1.0)
 fileprivate let darkBgColor = Color(.displayP3, red: 0.1176, green: 0.0784, blue: 0.1725, opacity: 1.0)
 
-struct ContentView: View {
+struct Previewer: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -21,9 +21,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Previewer_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Previewer()
             .frame(width: 500, height: 500)
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Preview")

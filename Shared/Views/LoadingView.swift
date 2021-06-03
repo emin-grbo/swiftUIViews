@@ -2,8 +2,7 @@
 /* For easy of copy/pastability, all code is in one bug chunk.
  Be a dear and refactor this out any way you see fit 🤘 */
 
-/* Idealy, you would NOT be using pre-defined constants or first view at all, only the code below the refactor line.
- I am leaving the initial view here just for easier usage example or possible extraction. Hope that works 👌 */
+/* Idealy, you would NOT be using pre-defined constants in this way, so keep that in mind.*/
 
 import SwiftUI
 
@@ -16,31 +15,6 @@ fileprivate let darkShadowColor                     = Color(.displayP3, red: 0.1
 
 fileprivate let graphAccentColor                    = Color(.displayP3, red: 0.011, green: 0.631, blue: 0.984, opacity: 1.0)
 fileprivate let fadedBackgroundColor                = Color(.displayP3, red: 0.694, green: 0.737, blue: 0.815, opacity: 1.0)
-
-struct LoaderView: View {
-    
-    /*
-     Please please don't use the colors this way 😅 I am only adding it here so you can have a preview
-     for both light and dark views. You should create a new semantic color in the assets and use it that way 👌
-     */
-    @Environment(\.colorScheme) var colorScheme
-    
-    var body: some View {
-        
-        let shadowColor = colorScheme == .dark ? darkShadowColor : lightShadowColor
-        
-        ZStack {
-            RoundedRectangle(cornerRadius: defaultRadius, style: .continuous)
-                .foregroundColor(.white)
-                .shadow(color: shadowColor, radius: defaultRadius)
-            Loader()
-        }
-        .frame(height: 86)
-        .padding(.horizontal, 60)
-
-    }
-}
-//------------------- REFACTOR ABOVE THIS LINE ---------------------------------------
 
 struct Loader: View {
     var body: some View {
