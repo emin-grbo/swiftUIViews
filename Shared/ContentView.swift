@@ -15,7 +15,7 @@ struct ContentView: View {
         
         ZStack {
             baseBGColor
-            LoaderView() // idealy you would only change this line.
+            CardWithImage() // idealy you would only change this line.
         }
         .edgesIgnoringSafeArea(.all)
     }
