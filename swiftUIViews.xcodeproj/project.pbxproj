@@ -18,6 +18,7 @@
 		D759F5CE265BF76000A4FB31 /* TableCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759F5CD265BF76000A4FB31 /* TableCellImage.swift */; };
 		D759F5D0265C433E00A4FB31 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759F5CF265C433E00A4FB31 /* LoadingView.swift */; };
 		D7630716264BB38700696726 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7630715264BB38700696726 /* RoundedButton.swift */; };
+		D782EC8726681F9A00F19317 /* CardWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782EC8626681F9A00F19317 /* CardWithImage.swift */; };
 		D7A7C7312654EBED00A77196 /* SFSymbolRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7C7302654EBED00A77196 /* SFSymbolRoundedButton.swift */; };
 		D7AA09AC26660440004489CD /* TwitterLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA09AB26660440004489CD /* TwitterLike.swift */; };
 		D7EBE2E3264D22430009C7FE /* NeumorphButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E2264D22430009C7FE /* NeumorphButton.swift */; };
@@ -40,6 +41,7 @@
 		D759F5CD265BF76000A4FB31 /* TableCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellImage.swift; sourceTree = "<group>"; };
 		D759F5CF265C433E00A4FB31 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D7630715264BB38700696726 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D782EC8626681F9A00F19317 /* CardWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWithImage.swift; sourceTree = "<group>"; };
 		D7A7C7302654EBED00A77196 /* SFSymbolRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolRoundedButton.swift; sourceTree = "<group>"; };
 		D7AA09AB26660440004489CD /* TwitterLike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLike.swift; sourceTree = "<group>"; };
 		D7B4C530262F5EA6005DAE03 /* swiftUIViews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftUIViews.entitlements; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		D726D4E825EC39A60044840D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D782EC8626681F9A00F19317 /* CardWithImage.swift */,
 				D7AA09AB26660440004489CD /* TwitterLike.swift */,
 				D759F5CF265C433E00A4FB31 /* LoadingView.swift */,
 				D759F5CD265BF76000A4FB31 /* TableCellImage.swift */,
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7EBE2E3264D22430009C7FE /* NeumorphButton.swift in Sources */,
+				D782EC8726681F9A00F19317 /* CardWithImage.swift in Sources */,
 				D759F5CC265BB3D100A4FB31 /* SquircleGraphIcon.swift in Sources */,
 				D759F5CE265BF76000A4FB31 /* TableCellImage.swift in Sources */,
 				D7A7C7312654EBED00A77196 /* SFSymbolRoundedButton.swift in Sources */,
