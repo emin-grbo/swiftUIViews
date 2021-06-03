@@ -57,6 +57,21 @@ struct CircleGraph: View {
     }
 }
 
+struct CircleGraph_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            CircleGraph()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+            CircleGraph()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
+    }
+}
+
 /*
  Awesome Sauce!
  Thank you for getting one of my views, hope you are happy with it 👌

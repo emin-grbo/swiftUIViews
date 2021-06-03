@@ -85,6 +85,21 @@ struct SingleGraph: View {
     }
 }
 
+struct SingleGraph_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            LineGraph()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+            LineGraph()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
+    }
+}
+
 /*
  Awesome Sauce!
  Thank you for getting one of my views, hope you are happy with it 👌

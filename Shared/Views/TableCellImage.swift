@@ -43,30 +43,53 @@ struct TableCellImageView: View {
 
 struct TableCellImage: View {
     var body: some View {
-        HStack(spacing: 16) {
-            ZStack {
-                RoundedRectangle(cornerRadius: defaultRadius,style: .continuous)
-                    .fill(greenAccent)
-                    .aspectRatio(1, contentMode: .fit)
-                Image(systemName: "photo.fill")
-                    .foregroundColor(.white)
-                    .font(titleFont)
+        ZStack {
+            RoundedRectangle(cornerRadius: defaultRadius, style: .continuous)
+                .foregroundColor(.white)
+            HStack(spacing: 16) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: defaultRadius,style: .continuous)
+                        .fill(greenAccent)
+                        .aspectRatio(1, contentMode: .fit)
+                    Image(systemName: "photo.fill")
+                        .foregroundColor(.white)
+                        .font(titleFont)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("cell title")
+                        .font(titleFont)
+                        .foregroundColor(.black)
+                    Text("cell subtitle")
+                        .font(subTitleFont)
+                        .foregroundColor(Color.gray)
+                }
+                Spacer()
+                Image(systemName: "chevron.forward")
+                    .foregroundColor(.gray)
             }
-            VStack(alignment: .leading, spacing: 4) {
-                Text("cell title")
-                    .font(titleFont)
-                    .foregroundColor(.black)
-                Text("cell subtitle")
-                    .font(subTitleFont)
-                    .foregroundColor(Color.gray)
-            }
-            Spacer()
-            Image(systemName: "chevron.forward")
-                .foregroundColor(.gray)
+            .frame(height: 54)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
         }
-        .frame(height: 54)
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
+        .frame(height: 86)
+    }
+}
+
+struct TableCellImage_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            TableCellImage()
+                .padding(100)
+                .fixedSize()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+                .background(Color.gray)
+            TableCellImage()
+                .padding(100)
+                .fixedSize()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
     }
 }
 

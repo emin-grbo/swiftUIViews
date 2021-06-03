@@ -101,6 +101,26 @@ struct NeuMorphButton<S: Shape>: View {
     }
 }
 
+struct NeumorphButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            Button("neumorph button 👌") {}
+                .buttonStyle(NeumorphButtonStyle())
+                .fixedSize()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+            Button("neumorph button 👌") {}
+                .buttonStyle(NeumorphButtonStyle())
+                .fixedSize()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .background(darkBgColor)
+                .preferredColorScheme(.dark)
+        }
+    }
+}
+
 /*
  Awesome Sauce!
  Thank you for getting one of my views, hope you are happy with it 👌

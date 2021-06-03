@@ -58,6 +58,26 @@ struct RoundedButtonStyle: ButtonStyle {
     }
 }
 
+struct RoundedButton_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            Button("rounded button") {}
+                .buttonStyle(RoundedButtonStyle())
+                .fixedSize()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+            
+            Button("rounded button") {}
+                .buttonStyle(RoundedButtonStyle())
+                .fixedSize()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
+    }
+}
+
 /*
  Awesome Sauce!
  Thank you for getting one of my views, hope you are happy with it 👌

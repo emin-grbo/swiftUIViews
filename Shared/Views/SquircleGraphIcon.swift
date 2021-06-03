@@ -58,6 +58,21 @@ struct SquircleGraphIcon: View {
     }
 }
 
+struct SquircleGraphIcon_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            SquircleGraphIcon()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+                .frame(width: 400, height: 400)
+            SquircleGraphIcon()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
+                .frame(width: 400, height: 400)
+        }
+    }
+}
+
 /*
  Awesome Sauce!
  Thank you for getting one of my views, hope you are happy with it 👌
