@@ -44,31 +44,54 @@ struct LoaderView: View {
 
 struct Loader: View {
     var body: some View {
-        VStack {
-            HStack {
-                Text("loading progress")
-                    .font(titleFont)
-                    .foregroundColor(.black)
-                Spacer()
-                Text("70%")
-                    .font(titleFont)
-                    .foregroundColor(.gray)
-            }
-            ZStack {
-                GeometryReader { gr in
-                    RoundedRectangle(cornerRadius: defaultRadius)
-                        .fill(fadedBackgroundColor)
-                        .frame(height: 16)
-                        .opacity(0.2)
-                    RoundedRectangle(cornerRadius: defaultRadius)
-                        .fill(graphAccentColor)
-                        .padding(.trailing, 80)
-                        .frame(height: 16)
+        ZStack {
+            RoundedRectangle(cornerRadius: defaultRadius, style: .continuous)
+                .foregroundColor(.white)
+            VStack {
+                HStack {
+                    Text("loading progress")
+                        .font(titleFont)
+                        .foregroundColor(.black)
+                    Spacer()
+                    Text("70%")
+                        .font(titleFont)
+                        .foregroundColor(.gray)
                 }
-                .frame(height: 16)
+                ZStack {
+                    GeometryReader { gr in
+                        RoundedRectangle(cornerRadius: defaultRadius)
+                            .fill(fadedBackgroundColor)
+                            .frame(height: 16)
+                            .opacity(0.2)
+                        RoundedRectangle(cornerRadius: defaultRadius)
+                            .fill(graphAccentColor)
+                            .padding(.trailing, 80)
+                            .frame(height: 16)
+                    }
+                    .frame(height: 16)
+                }
             }
+            .padding(.horizontal, 24)
         }
-        .padding(.horizontal, 24)
+        .frame(height: 86)
+    }
+}
+
+struct Loader_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            Loader()
+                .padding(100)
+                .fixedSize()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+                .background(Color.gray)
+            Loader()
+                .padding(100)
+                .fixedSize()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
     }
 }
 

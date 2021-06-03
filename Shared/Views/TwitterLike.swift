@@ -14,12 +14,15 @@ fileprivate let fadedBackgroundColor                = Color(.displayP3, red: 0.6
 
 struct TwitterLike: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var scale: CGFloat           = 0
     @State var textOpacity: Double      = 1
     @State var offset: CGFloat          = 0
     @State var isLiked                  = false
     
     var body: some View {
+        let circleMaskColor = colorScheme == .dark ? Color.black : Color.white
         ZStack {
             Image(systemName: "plus")
                 .resizable()
@@ -52,7 +55,7 @@ struct TwitterLike: View {
                 .animation(.easeInOut(duration: 1).delay(1))
             Circle()
                 .frame(width: 36, height: 36, alignment: .center)
-                .foregroundColor(Color.white)
+                .foregroundColor(circleMaskColor)
             Circle()
                 .frame(width: 35, height: 35, alignment: .center)
                 .foregroundColor(Color.red)
@@ -60,7 +63,7 @@ struct TwitterLike: View {
                 .animation(.spring())
             Circle()
                 .frame(width: 36, height: 36, alignment: .center)
-                .foregroundColor(Color.white)
+                .foregroundColor(circleMaskColor)
                 .scaleEffect(scale)
                 .animation(.spring().delay(0.3))
             if !isLiked {
@@ -96,6 +99,23 @@ struct TwitterLike: View {
             textOpacity = isLiked ? 1 : 0
             offset = isLiked      ? 0 : -30
             isLiked.toggle()
+        }
+    }
+}
+
+struct TwitterLike_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            TwitterLike()
+                .padding(100)
+                .fixedSize()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+            TwitterLike()
+                .padding(100)
+                .fixedSize()
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
         }
     }
 }
