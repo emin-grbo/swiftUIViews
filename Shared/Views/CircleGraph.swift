@@ -11,7 +11,6 @@ fileprivate let shadowRadius:    CGFloat = 20
 fileprivate let imageFontSize:   CGFloat = 50
 fileprivate let textFontSize:    CGFloat = 80
 fileprivate let completionStart: CGFloat = 0
-fileprivate let completionEnd:   CGFloat = 0.7
 
 fileprivate let lightShadowColor         = Color(.displayP3, red: 0.70, green: 0.70, blue: 1, opacity: 1.0)
 fileprivate let darkShadowColor          = Color(.displayP3, red: 0.3137, green: 0.1294, blue: 0.6980, opacity: 1.0)
@@ -21,6 +20,7 @@ fileprivate let shadowColor              = Color(.displayP3, red: 0.9, green: 0.
 
 struct CircleGraph: View {
     
+    let value: CGFloat
     /*
      Please please don't use the colors this way 😅 I am only adding it here so you can have a preview
      for both light and dark views. You should create a new semantic color in the assets and use it that way 👌
@@ -40,13 +40,13 @@ struct CircleGraph: View {
                 VStack {
                     Image(systemName: "chart.bar.fill")
                         .font(Font.system(size: imageFontSize, weight: .black, design: .rounded))
-                    Text("70")
+                    Text("\(Int(value))")
                         .font(Font.system(size: textFontSize, weight: .heavy, design: .rounded))
                 }
                 .foregroundColor(baseAccentColor)
             }
             Circle()
-                .trim(from: completionStart, to: completionEnd)
+                .trim(from: completionStart, to: value/100)
                 .stroke(baseAccentColor,
                         style: StrokeStyle(lineWidth: lineWidth, lineCap: CGLineCap.round))
                 .frame(width: baseSize + lineWidth, height: baseSize + lineWidth)
@@ -58,13 +58,28 @@ struct CircleGraph: View {
 }
 
 struct CircleGraph_Previews: PreviewProvider {
+    struct CircleGraphDemo: View {
+        @State var value: CGFloat = 50
+        
+        var body: some View {
+            VStack {
+                CircleGraph(value: value)
+                    .padding(.bottom, 30)
+
+                Slider(value: $value, in: 0...100, step: 1)
+            }
+            
+        }
+    }
+    
     static var previews: some View {
         Group {
-            CircleGraph()
+            CircleGraphDemo(value: 50)
                 .padding(100)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.light)
-            CircleGraph()
+            
+            CircleGraphDemo(value: 75)
                 .padding(100)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.dark)
