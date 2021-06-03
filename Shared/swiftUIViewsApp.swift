@@ -4,7 +4,7 @@ import SwiftUI
 struct swiftUIViewsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Previewer()
         }
     }
 }

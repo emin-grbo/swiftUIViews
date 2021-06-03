@@ -6,9 +6,15 @@
 import SwiftUI
 
 struct Colors {
+    fileprivate let lightBaseColor    = Color(.displayP3, red: 0, green: 0, blue: 0, opacity: 1.0)
+    fileprivate let darkBaseColor     = Color(.displayP3, red: 0.0666, green: 0.0274, blue: 0.1098, opacity: 1.0)
+    
     fileprivate let lightBgColor        = Color(.displayP3, red: 0.9764, green: 0.9803, blue: 0.9882, opacity: 1.0)
     fileprivate let darkBgColor         = Color(.displayP3, red: 0.1176, green: 0.0784, blue: 0.1725, opacity: 1.0)
-    fileprivate let shadowColor         = Color(.displayP3, red: 0.95, green: 0.95, blue: 1, opacity: 1.0)
+    
+    fileprivate let lightShadowColor    = Color(.displayP3, red: 0.95, green: 0.95, blue: 1, opacity: 1.0)
+    fileprivate let darkShadowColor     = Color(.displayP3, red: 0.1803, green: 0.0470, blue: 0.4627, opacity: 1.0)
+    
     fileprivate let textColor           = Color(.displayP3, red: 0.117, green: 0.125, blue: 0.192, opacity: 1.0)
     fileprivate let purpleAccentColor   = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
     fileprivate let pinkAccentColor     = Color(.displayP3, red: 1, green: 0.04, blue: 0.56, opacity: 1.0)
