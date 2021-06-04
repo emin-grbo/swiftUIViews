@@ -18,21 +18,21 @@ fileprivate var frameSize:          CGFloat = 200
 fileprivate var firstItem:          String = "FIRST"
 fileprivate var secondItem:         String = "SECOND"
 fileprivate var thirdItem:          String = "THIRD"
-  
-fileprivate let lBgColor                = Color(.displayP3, red: 248/255, green: 250/255, blue: 251/255, opacity: 1.0)
-fileprivate let dBgColor                = Color(.displayP3, red: 29/255, green: 19/255, blue: 44/255, opacity: 1.0)
-fileprivate let lShadowColor            = Color(.displayP3, red: 242/255, green: 242/255, blue: 1, opacity: 1.0)
-fileprivate let dShadowColor            = Color(.displayP3, red: 45/255, green: 26/255, blue: 88/255, opacity: 1.0)
-fileprivate let lBaseColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
-fileprivate let dBaseColor              = Color(.displayP3, red: 30/255, green: 17/255, blue: 44/255, opacity: 1.0)
-fileprivate let lTextColor              = Color(.displayP3, red: 30/255, green: 21/255, blue: 49/255, opacity: 1.0)
-fileprivate let dTextColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
-fileprivate let lfadedBackgroundColor   = Color(.displayP3, red: 240/255, green: 242/255, blue: 246/255, opacity: 1.0)
-fileprivate let dfadedBackgroundColor   = Color(.displayP3, red: 16/255, green: 10/255, blue: 23/255, opacity: 1.0)
 
-fileprivate let firstAccentColor        = Color(.displayP3, red: 99/255, green: 25/255, blue: 229/255, opacity: 1.0)
-fileprivate let secondAccentColor       = Color(.displayP3, red: 1, green: 10/255, blue: 142/255, opacity: 1.0)
-fileprivate let thirdAccentColor        = Color(.displayP3, red: 2/255, green: 160/255, blue: 250/255, opacity: 1.0)
+fileprivate let lBgColor                   = Color(.displayP3, red: 248/255, green: 250/255, blue: 251/255, opacity: 1.0)
+fileprivate let dBgColor                   = Color(.displayP3, red: 29/255, green: 19/255, blue: 44/255, opacity: 1.0)
+fileprivate let lShadowColor               = Color(.displayP3, red: 242/255, green: 242/255, blue: 1, opacity: 1.0)
+fileprivate let dShadowColor               = Color(.displayP3, red: 45/255, green: 26/255, blue: 88/255, opacity: 1.0)
+fileprivate let lBaseColor                 = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
+fileprivate let dBaseColor                 = Color(.displayP3, red: 30/255, green: 17/255, blue: 44/255, opacity: 1.0)
+fileprivate let lTextColor                 = Color(.displayP3, red: 30/255, green: 21/255, blue: 49/255, opacity: 1.0)
+fileprivate let dTextColor                 = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
+fileprivate let lfadedBackgroundColor      = Color(.displayP3, red: 240/255, green: 242/255, blue: 246/255, opacity: 1.0)
+fileprivate let dfadedBackgroundColor      = Color(.displayP3, red: 16/255, green: 10/255, blue: 23/255, opacity: 1.0)
+
+fileprivate let firstAccentColor           = Color(.displayP3, red: 99/255, green: 25/255, blue: 229/255, opacity: 1.0)
+fileprivate let secondAccentColor          = Color(.displayP3, red: 1, green: 10/255, blue: 142/255, opacity: 1.0)
+fileprivate let thirdAccentColor           = Color(.displayP3, red: 2/255, green: 160/255, blue: 250/255, opacity: 1.0)
 
 struct LineGraph: View {
     
@@ -41,7 +41,7 @@ struct LineGraph: View {
      You should create a new semantic color in the assets and use it that way 👌
      */
     @Environment(\.colorScheme) var colorScheme
-
+    
     var body: some View {
         
         let shadowColor = colorScheme == .dark ? dShadowColor : lShadowColor

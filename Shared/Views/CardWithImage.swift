@@ -19,13 +19,12 @@ fileprivate let dBaseColor              = Color(.displayP3, red: 30/255, green: 
 fileprivate let lTextColor              = Color(.displayP3, red: 30/255, green: 21/255, blue: 49/255, opacity: 1.0)
 fileprivate let dTextColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
 
-fileprivate let pinkAccentColor                     = Color(.displayP3, red: 1, green: 0.04, blue: 0.56, opacity: 1.0)
-fileprivate let purpleAccentColor                   = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
-fileprivate let yellowAccentColor                   = Color(.displayP3, red: 1, green: 0.7843, blue: 0, opacity: 1.0)
+fileprivate let pinkAccentColor         = Color(.displayP3, red: 1, green: 10/255, blue: 142/255, opacity: 1.0)
+fileprivate let yellowAccentColor       = Color(.displayP3, red: 1, green: 0.7843, blue: 0, opacity: 1.0)
 
-fileprivate let titleFont                           = Font.system(size: 24, weight: .bold, design: .rounded)
-fileprivate let detailFont                          = Font.system(size: 18, weight: .semibold, design: .rounded)
-fileprivate let subtitleFont                        = Font.system(size: 16, weight: .medium, design: .rounded)
+fileprivate let titleFont               = Font.system(size: 24, weight: .bold, design: .rounded)
+fileprivate let detailFont              = Font.system(size: 18, weight: .semibold, design: .rounded)
+fileprivate let subtitleFont            = Font.system(size: 16, weight: .medium, design: .rounded)
 
 struct CardWithImage: View {
     /*

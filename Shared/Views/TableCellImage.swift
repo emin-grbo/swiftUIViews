@@ -7,9 +7,9 @@
 import SwiftUI
 
 /* Defining all constants used in the view.*/
-fileprivate let titleFont                           = Font.system(size: 16, weight: .bold, design: .rounded)
-fileprivate let subTitleFont                        = Font.system(size: 12, weight: .bold, design: .rounded)
-fileprivate var defaultRadius: CGFloat              = 18
+fileprivate let titleFont               = Font.system(size: 16, weight: .bold, design: .rounded)
+fileprivate let subTitleFont            = Font.system(size: 12, weight: .bold, design: .rounded)
+fileprivate var defaultRadius: CGFloat  = 18
 
 fileprivate let lBgColor                = Color(.displayP3, red: 248/255, green: 250/255, blue: 251/255, opacity: 1.0)
 fileprivate let dBgColor                = Color(.displayP3, red: 29/255, green: 19/255, blue: 44/255, opacity: 1.0)
@@ -20,7 +20,7 @@ fileprivate let dBaseColor              = Color(.displayP3, red: 30/255, green: 
 fileprivate let lTextColor              = Color(.displayP3, red: 30/255, green: 21/255, blue: 49/255, opacity: 1.0)
 fileprivate let dTextColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
 
-fileprivate let greenAccent                         = Color(.displayP3, red: 0.2156, green: 0.9607, blue: 0.7843, opacity: 1.0)
+fileprivate let greenAccent             = Color(.displayP3, red: 54/255, green: 244/255, blue: 199/255, opacity: 1.0)
 
 struct TableCellImage: View {
     /*

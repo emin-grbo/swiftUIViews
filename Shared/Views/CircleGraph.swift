@@ -22,12 +22,12 @@ fileprivate let shadowColor              = Color(.displayP3, red: 0.9, green: 0.
 
 struct CircleGraph: View {
     
-    let value: CGFloat
     /*
      Environtment is used just to make it easier to preview light and dark look in one view setup.
      You should create a new semantic color in the assets and use it that way 👌
      */
     @Environment(\.colorScheme) var colorScheme
+    let value: CGFloat
     
     var body: some View {
         
