@@ -11,15 +11,34 @@ fileprivate let titleFont                           = Font.system(size: 16, weig
 fileprivate let subTitleFont                        = Font.system(size: 12, weight: .bold, design: .rounded)
 fileprivate var defaultRadius: CGFloat              = 18
 
-fileprivate let lightShadowColor                    = Color(.displayP3, red: 0.95, green: 0.95, blue: 1, opacity: 1.0)
-fileprivate let darkShadowColor                     = Color(.displayP3, red: 0.1803, green: 0.0470, blue: 0.4627, opacity: 1.0)
+fileprivate let lBgColor                = Color(.displayP3, red: 248/255, green: 250/255, blue: 251/255, opacity: 1.0)
+fileprivate let dBgColor                = Color(.displayP3, red: 29/255, green: 19/255, blue: 44/255, opacity: 1.0)
+fileprivate let lShadowColor            = Color(.displayP3, red: 242/255, green: 242/255, blue: 1, opacity: 1.0)
+fileprivate let dShadowColor            = Color(.displayP3, red: 45/255, green: 26/255, blue: 88/255, opacity: 1.0)
+fileprivate let lBaseColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
+fileprivate let dBaseColor              = Color(.displayP3, red: 30/255, green: 17/255, blue: 44/255, opacity: 1.0)
+fileprivate let lTextColor              = Color(.displayP3, red: 30/255, green: 21/255, blue: 49/255, opacity: 1.0)
+fileprivate let dTextColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
+
 fileprivate let greenAccent                         = Color(.displayP3, red: 0.2156, green: 0.9607, blue: 0.7843, opacity: 1.0)
 
 struct TableCellImage: View {
+    /*
+     Environtment is used just to make it easier to preview light and dark look in one view setup.
+     You should create a new semantic color in the assets and use it that way 👌
+     */
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
+        
+        let shadowColor = colorScheme == .dark ? dShadowColor : lShadowColor
+        let baseColor   = colorScheme == .dark ? dBaseColor : lBaseColor
+        let textColor   = colorScheme == .dark ? dTextColor : lTextColor
+        
         ZStack {
             RoundedRectangle(cornerRadius: defaultRadius, style: .continuous)
-                .foregroundColor(.white)
+                .foregroundColor(baseColor)
+                .shadow(color: shadowColor, radius: defaultRadius)
             HStack(spacing: 16) {
                 ZStack {
                     RoundedRectangle(cornerRadius: defaultRadius,style: .continuous)
@@ -32,14 +51,15 @@ struct TableCellImage: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("cell title")
                         .font(titleFont)
-                        .foregroundColor(.black)
+                        .foregroundColor(textColor)
                     Text("cell subtitle")
                         .font(subTitleFont)
-                        .foregroundColor(Color.gray)
+                        .foregroundColor(textColor)
+                        .opacity(0.8)
                 }
                 Spacer()
                 Image(systemName: "chevron.forward")
-                    .foregroundColor(.gray)
+                    .foregroundColor(textColor)
             }
             .frame(height: 54)
             .padding(.horizontal, 16)
@@ -57,12 +77,13 @@ struct TableCellImage_Previews: PreviewProvider {
                 .fixedSize()
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.light)
-                .background(Color.gray)
+                .background(lBgColor)
             TableCellImage()
                 .padding(100)
                 .fixedSize()
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.dark)
+                .background(dBgColor)
         }
     }
 }

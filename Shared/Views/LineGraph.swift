@@ -19,13 +19,20 @@ fileprivate var firstItem:          String = "FIRST"
 fileprivate var secondItem:         String = "SECOND"
 fileprivate var thirdItem:          String = "THIRD"
   
-fileprivate let lightShadowColor        = Color(.displayP3, red: 0.95, green: 0.95, blue: 1, opacity: 1.0)
-fileprivate let darkShadowColor         = Color(.displayP3, red: 0.1803, green: 0.0470, blue: 0.4627, opacity: 1.0)
-fileprivate let textColor               = Color(.displayP3, red: 0.117, green: 0.125, blue: 0.192, opacity: 1.0)
-fileprivate let firstAccentColor        = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
-fileprivate let secondAccentColor       = Color(.displayP3, red: 1, green: 0.04, blue: 0.56, opacity: 1.0)
-fileprivate let thirdAccentColor        = Color(.displayP3, red: 0.011, green: 0.631, blue: 0.984, opacity: 1.0)
-fileprivate let fadedBackgroundColor    = Color(.displayP3, red: 0.694, green: 0.737, blue: 0.815, opacity: 1.0)
+fileprivate let lBgColor                = Color(.displayP3, red: 248/255, green: 250/255, blue: 251/255, opacity: 1.0)
+fileprivate let dBgColor                = Color(.displayP3, red: 29/255, green: 19/255, blue: 44/255, opacity: 1.0)
+fileprivate let lShadowColor            = Color(.displayP3, red: 242/255, green: 242/255, blue: 1, opacity: 1.0)
+fileprivate let dShadowColor            = Color(.displayP3, red: 45/255, green: 26/255, blue: 88/255, opacity: 1.0)
+fileprivate let lBaseColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
+fileprivate let dBaseColor              = Color(.displayP3, red: 30/255, green: 17/255, blue: 44/255, opacity: 1.0)
+fileprivate let lTextColor              = Color(.displayP3, red: 30/255, green: 21/255, blue: 49/255, opacity: 1.0)
+fileprivate let dTextColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
+fileprivate let lfadedBackgroundColor   = Color(.displayP3, red: 240/255, green: 242/255, blue: 246/255, opacity: 1.0)
+fileprivate let dfadedBackgroundColor   = Color(.displayP3, red: 16/255, green: 10/255, blue: 23/255, opacity: 1.0)
+
+fileprivate let firstAccentColor        = Color(.displayP3, red: 99/255, green: 25/255, blue: 229/255, opacity: 1.0)
+fileprivate let secondAccentColor       = Color(.displayP3, red: 1, green: 10/255, blue: 142/255, opacity: 1.0)
+fileprivate let thirdAccentColor        = Color(.displayP3, red: 2/255, green: 160/255, blue: 250/255, opacity: 1.0)
 
 struct LineGraph: View {
     
@@ -37,11 +44,12 @@ struct LineGraph: View {
 
     var body: some View {
         
-        let shadowColor = colorScheme == .dark ? darkShadowColor : lightShadowColor
+        let shadowColor = colorScheme == .dark ? dShadowColor : lShadowColor
+        let baseColor = colorScheme == .dark ? dBaseColor : lBaseColor
         
         ZStack {
             RoundedRectangle(cornerRadius: defaultRadius)
-                .foregroundColor(Color.white)
+                .foregroundColor(baseColor)
                 .shadow(color: shadowColor, radius: defaultRadius)
             HStack {
                 SingleGraph(itemAccentColor: firstAccentColor, itemTitle: firstItem, padding: graphBigPadding)
@@ -59,17 +67,22 @@ struct LineGraph: View {
 
 struct SingleGraph: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var itemAccentColor: Color
     var itemTitle:       String
     var padding:         CGFloat
     
     var body: some View {
+        
+        let textColor = colorScheme == .dark ? dTextColor : lTextColor
+        let darkFaded = colorScheme == .dark ? dfadedBackgroundColor : lfadedBackgroundColor
+        
         VStack {
             ZStack {
                 GeometryReader { gr in
                     RoundedRectangle(cornerRadius: defaultRadius, style: .continuous)
-                        .fill(fadedBackgroundColor)
-                        .opacity(0.2)
+                        .fill(darkFaded)
                     RoundedRectangle(cornerRadius: defaultRadius, style: .continuous)
                         .fill(itemAccentColor)
                         .padding(.top, padding)
@@ -93,10 +106,12 @@ struct SingleGraph_Previews: PreviewProvider {
                 .padding(100)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.light)
+                .background(lBgColor)
             LineGraph()
                 .padding(100)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.dark)
+                .background(dBgColor)
         }
     }
 }
