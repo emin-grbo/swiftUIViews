@@ -3,7 +3,7 @@
 //  swiftUIViews (iOS)
 //
 // MARK: IMPORTANT🚨
-/* For easy of copy/pastability, all code is in one bug chunk.
+/* For easy of copy/pastability, all code is in one big chunk.
  Be a dear and refactor this out any way you see fit 🤘 */
 
 /* Idealy, you would NOT be using pre-defined constants in this way, so keep that in mind.*/
