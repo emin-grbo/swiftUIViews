@@ -15,7 +15,7 @@ struct Previewer: View {
         
         ZStack {
             baseBGColor
-            LineGraph() // idealy you would only change this line.
+            CardWithData() // idealy you would only change this line.
         }
         .edgesIgnoringSafeArea(.all)
     }

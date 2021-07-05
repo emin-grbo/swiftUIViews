@@ -25,6 +25,7 @@
 		D7EBE2E5264D3A9F0009C7FE /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E4264D3A9F0009C7FE /* LineGraph.swift */; };
 		D7EBE2E7264D663C0009C7FE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E6264D663C0009C7FE /* Colors.swift */; };
 		D7F6D888263323200033A10C /* CircleGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6D887263323200033A10C /* CircleGraph.swift */; };
+		D7FABB812692FB9400ACF9F6 /* CardWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FABB802692FB9400ACF9F6 /* CardWithData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D7EBE2E4264D3A9F0009C7FE /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 		D7EBE2E6264D663C0009C7FE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D7F6D887263323200033A10C /* CircleGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGraph.swift; sourceTree = "<group>"; };
+		D7FABB802692FB9400ACF9F6 /* CardWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWithData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		D726D4E825EC39A60044840D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D7FABB802692FB9400ACF9F6 /* CardWithData.swift */,
 				D782EC8626681F9A00F19317 /* CardWithImage.swift */,
 				D7AA09AB26660440004489CD /* TwitterLike.swift */,
 				D759F5CF265C433E00A4FB31 /* LoadingView.swift */,
@@ -244,6 +247,7 @@
 				D7EBE2E5264D3A9F0009C7FE /* LineGraph.swift in Sources */,
 				D7630716264BB38700696726 /* RoundedButton.swift in Sources */,
 				D72B04612665618E0073CD37 /* ViewTemplate-dontDelete.swift in Sources */,
+				D7FABB812692FB9400ACF9F6 /* CardWithData.swift in Sources */,
 				D7AA09AC26660440004489CD /* TwitterLike.swift in Sources */,
 				D726D4D225EC39060044840D /* Previewer.swift in Sources */,
 				D726D4D025EC39060044840D /* swiftUIViewsApp.swift in Sources */,
