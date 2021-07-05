@@ -26,6 +26,7 @@
 		D7EBE2E7264D663C0009C7FE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBE2E6264D663C0009C7FE /* Colors.swift */; };
 		D7F6D888263323200033A10C /* CircleGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6D887263323200033A10C /* CircleGraph.swift */; };
 		D7FABB812692FB9400ACF9F6 /* CardWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FABB802692FB9400ACF9F6 /* CardWithData.swift */; };
+		D7FABB83269365AA00ACF9F6 /* ComparedProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FABB82269365AA00ACF9F6 /* ComparedProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		D7EBE2E6264D663C0009C7FE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D7F6D887263323200033A10C /* CircleGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGraph.swift; sourceTree = "<group>"; };
 		D7FABB802692FB9400ACF9F6 /* CardWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWithData.swift; sourceTree = "<group>"; };
+		D7FABB82269365AA00ACF9F6 /* ComparedProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparedProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		D726D4E825EC39A60044840D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D7FABB82269365AA00ACF9F6 /* ComparedProgress.swift */,
 				D7FABB802692FB9400ACF9F6 /* CardWithData.swift */,
 				D782EC8626681F9A00F19317 /* CardWithImage.swift */,
 				D7AA09AB26660440004489CD /* TwitterLike.swift */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7EBE2E3264D22430009C7FE /* NeumorphButton.swift in Sources */,
+				D7FABB83269365AA00ACF9F6 /* ComparedProgress.swift in Sources */,
 				D782EC8726681F9A00F19317 /* CardWithImage.swift in Sources */,
 				D759F5CC265BB3D100A4FB31 /* SquircleGraphIcon.swift in Sources */,
 				D759F5CE265BF76000A4FB31 /* TableCellImage.swift in Sources */,

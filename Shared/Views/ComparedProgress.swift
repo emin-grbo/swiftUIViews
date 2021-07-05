@@ -1,3 +1,7 @@
+//
+//  ComparedProgress.swift
+//  swiftUIViews (iOS)
+//
 // MARK: IMPORTANT🚨
 /* For easy of copy/pastability, all code is in one bug chunk.
  Be a dear and refactor this out any way you see fit 🤘 */
@@ -7,26 +11,19 @@
 import SwiftUI
 
 /* Defining all constants used in the view.*/
-fileprivate var defaultRadius:              CGFloat = 24
-fileprivate var basePadding:                CGFloat = 16
-
 fileprivate let lBgColor                = Color(.displayP3, red: 248/255, green: 250/255, blue: 251/255, opacity: 1.0)
 fileprivate let dBgColor                = Color(.displayP3, red: 29/255, green: 19/255, blue: 44/255, opacity: 1.0)
 fileprivate let lShadowColor            = Color(.displayP3, red: 242/255, green: 242/255, blue: 1, opacity: 1.0)
 fileprivate let dShadowColor            = Color(.displayP3, red: 45/255, green: 26/255, blue: 88/255, opacity: 1.0)
 fileprivate let lBaseColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
 fileprivate let dBaseColor              = Color(.displayP3, red: 30/255, green: 17/255, blue: 44/255, opacity: 1.0)
-fileprivate let lTextColor              = Color(.displayP3, red: 30/255, green: 21/255, blue: 49/255, opacity: 1.0)
-fileprivate let dTextColor              = Color(.displayP3, red: 1, green: 1, blue: 1, opacity: 1.0)
 
 fileprivate let pinkAccentColor         = Color(.displayP3, red: 1, green: 10/255, blue: 142/255, opacity: 1.0)
+fileprivate let purpleAccentColor       = Color(.displayP3, red: 0.39, green: 0.1, blue: 0.9, opacity: 1.0)
 
-fileprivate let titleFont               = Font.system(size: 24, weight: .bold, design: .rounded)
 fileprivate let detailFont              = Font.system(size: 18, weight: .semibold, design: .rounded)
-fileprivate let subtitleFont            = Font.system(size: 16, weight: .medium, design: .rounded)
 
-struct CardWithData: View {
-    
+struct ComparedProgress: View {
     /*
      Environtment is used just to make it easier to preview light and dark look in one view setup.
      You should create a new semantic color in the assets and use it that way 👌
@@ -37,66 +34,59 @@ struct CardWithData: View {
         
         let shadowColor = colorScheme == .dark ? dShadowColor : lShadowColor
         let baseColor   = colorScheme == .dark ? dBaseColor : lBaseColor
-        let textColor   = colorScheme == .dark ? dTextColor : lTextColor
         
         ZStack {
-            RoundedRectangle(cornerRadius: defaultRadius, style: .continuous)
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
                 .foregroundColor(baseColor)
-                .shadow(color: shadowColor, radius: defaultRadius)
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("title text")
-                        .font(subtitleFont)
-                        .foregroundColor(textColor)
-                    Spacer()
-                    // MARK: Top right icon
-                    Image(systemName: "bolt.circle.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(pinkAccentColor)
-                        .frame(width: 32, height: 32)
+                .shadow(color: shadowColor, radius: 24)
+            VStack {
+                ZStack {
+                    HStack(spacing: 0) {
+                        Capsule()
+                            .fill(pinkAccentColor)
+                            .frame(height: 8)
+                        Capsule()
+                            .fill(purpleAccentColor)
+                            .frame(height: 8)
+                    }
+                    .padding(.bottom, 16)
+                    
+                    VStack {
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(pinkAccentColor)
+                            .frame(width: 4, height: 32)
+                        RoundedRectangle(cornerRadius: 32)
+                            .fill(pinkAccentColor)
+                            .frame(width: 4, height: 6)
+                    }
                 }
-                
-                Spacer()
-                
-                Text("123,-")
-                    .font(titleFont)
-                    .foregroundColor(textColor)
-                
-                Spacer()
-                
-                VStack(alignment: .leading) {
-                    Text("item title")
-                        .font(titleFont)
-                        .foregroundColor(textColor)
-                    Text("item subtitle")
-                        .font(detailFont)
-                        .foregroundColor(textColor)
-                        .opacity(0.5)
-                }
+                Text("not bad")
+                    .font(detailFont)
             }
-            .padding(24)
+            .padding(50)
         }
-        .frame(height: 200)
+        .padding(50)
+        .frame(height: 100)
     }
 }
 
-struct CardWithData_Previews: PreviewProvider {
+struct ComparedProgress_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CardWithData()
-                .padding(100)
+            ComparedProgress()
+                .padding(50)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.light)
                 .background(lBgColor)
-            CardWithData()
-                .padding(100)
+            ComparedProgress()
+                .padding(50)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .preferredColorScheme(.dark)
                 .background(dBgColor)
         }
     }
 }
+
 
 /*
  Awesome Sauce!

@@ -15,7 +15,7 @@ struct Previewer: View {
         
         ZStack {
             baseBGColor
-            CardWithData() // idealy you would only change this line.
+            ComparedProgress() // idealy you would only change this line.
         }
         .edgesIgnoringSafeArea(.all)
     }
