@@ -15,12 +15,31 @@
 import SwiftUI
 
 /* Defining all constants used in the view.*/
-fileprivate var defaultRadius: CGFloat              = 18
+fileprivate let lBgColor                = Color(.displayP3, red: 248/255, green: 250/255, blue: 251/255, opacity: 1.0)
+fileprivate let dBgColor                = Color(.displayP3, red: 29/255, green: 19/255, blue: 44/255, opacity: 1.0)
+fileprivate var defaultRadius: CGFloat  = 18
 
 struct YOURVIEW: View {
     var body: some View {
         VStack {
             // your view
+        }
+    }
+}
+
+struct YOURVIEW_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            YOURVIEW()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.light)
+                .background(lBgColor)
+            YOURVIEW()
+                .padding(100)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .preferredColorScheme(.dark)
+                .background(dBgColor)
         }
     }
 }

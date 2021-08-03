@@ -15,7 +15,8 @@ struct Previewer: View {
         
         ZStack {
             baseBGColor
-            ComparedProgress() // idealy you would only change this line.
+            GraphView() // idealy you would only change this line.
+                .frame(width: 200)
         }
         .edgesIgnoringSafeArea(.all)
     }
